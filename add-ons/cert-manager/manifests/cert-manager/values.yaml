@@ -1,0 +1,39 @@
+global.logLevel: "3"
+ingressShim.defaultIssuerGroup: "cert-manager.io"
+ingressShim.defaultIssuerKind: "ClusterIssuer"
+ingressShim.defaultIssuerName: "letsencrypt-staging"
+installCRDs: "true"
+extraEnvVarsSecret:
+  - name: AWS_ACCESS_KEY_ID
+    valueFrom:
+      secretKeyRef:
+        name: cert-manager-aws
+        key: AWS_ACCESS_KEY_ID
+  - name: AWS_SECRET_ACCESS_KEY
+    valueFrom:
+      secretKeyRef:
+        name: cert-manager-aws
+        key: AWS_SECRET_ACCESS_KEY
+resources:
+  limits:
+    cpu: 100m
+    memory: 100Mi
+  requests:
+    cpu: 100m
+    memory: 100Mi
+cainjector:
+  resources:
+    limits:
+      cpu: 100m
+      memory: 200Mi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+webhook:
+  resources:
+    limits:
+      cpu: 100m
+      memory: 80Mi
+    requests:
+      cpu: 100m
+      memory: 80Mi

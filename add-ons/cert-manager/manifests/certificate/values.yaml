@@ -1,0 +1,5 @@
+# TODO: jinja template
+domain: ctosc-88.bsf-testing.com
+hosted_zone_id: Z05620741ABABDDEC0B4Z
+email: dev@bah.com
+issuer: letsencrypt-production

@@ -1,0 +1,12 @@
+# this kustomization file is used to bootstrap the cluster, but
+# can't be used by Flux because it requires ksops
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - "https://repo1.dso.mil/big-bang/bigbang//base/flux?ref=2.9.0"
+
+components:
+  - aws-ccm
+  - bigbang
+  - cert-manager
+  - external-secrets

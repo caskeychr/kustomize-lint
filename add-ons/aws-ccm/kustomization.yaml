@@ -1,0 +1,6 @@
+apiVersion: kustomize.config.k8s.io/v1alpha1
+kind: Component
+resources:
+- manifests/aws-ccm-helm-rancher.yaml
+- manifests/aws-ebs-csi-driver.yaml
+- manifests/sync.yaml

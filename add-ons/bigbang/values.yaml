@@ -1,0 +1,12 @@
+# ** NOTE **
+# This is a portion of the application/deployment settings that are used to install Big Bang.
+# The settings in this file are aggregated with the various components in bigbang/components
+# which enable/disable applications and their infrastructure in the cluster.
+
+domain: ctosc-88.bsf-testing.com
+
+networkPolicies:
+  enabled: true
+  controlPlaneCidr: 10.88.0.0/22
+  nodeCidr: 10.88.0.0/22
+  vpcCidr: 10.88.0.0/22

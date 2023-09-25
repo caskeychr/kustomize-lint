@@ -1,0 +1,6 @@
+vaultURL: https://vault.ctosc-88.bsf-testing.com/
+secretsPath: bsf
+secretEngineVersion: v2
+esoPolicyTokenSecret: vault-auth
+esoPolicyTokenSecretKey: token
+esoPolicyTokenSecretNamespace: external-secrets-operator
