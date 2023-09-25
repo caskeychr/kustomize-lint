@@ -39,7 +39,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: ../results/kube-linter.sarif
-          cateogry: kustomzie-lint
+          category: kustomzie-lint
 
       # Ensure the workflow eventually fails if files did not pass kube-linter checks.
       - name: Verify kube-linter-action succeeded
