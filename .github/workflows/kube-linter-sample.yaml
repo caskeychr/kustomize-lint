@@ -18,6 +18,14 @@ jobs:
         shell: bash
         run: mkdir -p ../results
 
+      - name: Scan repo with kube-linter
+        uses: stackrox/kube-linter-action@v1.0.4
+        with:
+          directory: add-ons
+          # config: .kube-linter/config.yaml
+          format: sarif
+          output-file: kube-linter.sarif
+
       - name: Scan yaml files with kube-linter
         uses: stackrox/kube-linter-action@v1.0.4
         id: kube-linter-action-scan
