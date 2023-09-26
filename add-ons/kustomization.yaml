@@ -9,4 +9,4 @@ components:
   - aws-ccm
   - bigbang
   - cert-manager
-  - external-secrets
+  # - external-secrets
