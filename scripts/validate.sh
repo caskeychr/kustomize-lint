@@ -23,6 +23,7 @@
 # - yq v4.34
 # - kustomize v5.0
 # - kubeconform v0.6
+# something to update
 
 set -o errexit
 set -o pipefail
