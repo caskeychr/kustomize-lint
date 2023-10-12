@@ -3,9 +3,9 @@ name: test
 on:
   workflow_dispatch:
   pull_request:
+    branches: [ 'main' ]
   push:
-    branches: [ '*' ]
-    tags-ignore: [ '*' ]
+    branches: [ 'main' ]
 
 jobs:
   manifests:
@@ -20,4 +20,4 @@ jobs:
       - name: Setup kustomize
         uses: fluxcd/pkg/actions/kustomize@main
       - name: Validate manifests
-        run: ./scripts/validate.sh
+        run: ./.github/scripts/validate.sh
